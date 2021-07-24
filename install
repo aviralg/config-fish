@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+switch (uname)
+    case Linux
+        sudo apt-get install fish
+    case Darwin
+        brew install fish
+end

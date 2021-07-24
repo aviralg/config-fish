@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+CUR_DIR=$(cd `dirname $0` && pwd)
+mkdir -p ~/.config
+ln -s $CUR_DIR/fish ~/.config/fish

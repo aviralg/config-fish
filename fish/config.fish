@@ -10,5 +10,7 @@ switch (uname)
     case Darwin
 end
 
-starship init fish | source
-zoxide init fish | source
+for x in (find  ~/.config/fish/conf.d/ -type f -maxdepth 1)
+    source $x
+end
+

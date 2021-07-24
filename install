@@ -1,8 +1,9 @@
-#!/usr/bin/env fish
+#!/usr/bin/env bash
 
-switch (uname)
-    case Linux
-        sudo apt-get install fish
-    case Darwin
-        brew install fish
-end
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    sudo apt-get install fish
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    brew install fish
+else
+    echo "Unknown OS type $OSTYPE"
+fi

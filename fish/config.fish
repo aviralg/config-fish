@@ -10,7 +10,8 @@ switch (uname)
     case Darwin
 end
 
-for x in (find  ~/.config/fish/conf.d/ -type f -maxdepth 1)
-    source $x
+if test -e ~/.config/fish/conf.d
+    for x in (find  ~/.config/fish/conf.d/ -type f -maxdepth 1)
+        source $x
+    end
 end
-
